@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvPrincipal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_above="@+id/relativeLayout"
+        android:background="@drawable/back2" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relativeLayout"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/bg">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tvCancion"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="1dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="1dp"
+            android:singleLine="true"
+            android:textColor="#ffffffff"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibAtras"
+            android:layout_below="@+id/tvCancion"
+            android:layout_toLeftOf="@+id/ibAccion"
+            android:layout_toStartOf="@+id/ibAccion"
+            android:onClick="prev"
+            android:background="@drawable/prev" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibAccion"
+            android:layout_alignTop="@+id/ibSiguiente"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/play"
+            android:onClick="play" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibSiguiente"
+            android:layout_toRightOf="@+id/ibAccion"
+            android:layout_below="@+id/tvCancion"
+            android:background="@drawable/next"
+            android:onClick="next" />
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_below="@+id/ibAccion"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibGrabar"
+            android:layout_above="@+id/seekBar"
+            android:layout_toLeftOf="@+id/ibAtras"
+            android:layout_toStartOf="@+id/ibAtras"
+            android:onClick="grabar"
+            android:background="@drawable/rec" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibAleatorio"
+            android:layout_above="@+id/seekBar"
+            android:layout_toRightOf="@+id/ibSiguiente"
+            android:layout_toEndOf="@+id/ibSiguiente"
+            android:onClick="aleatorio"
+            android:background="@drawable/random" />
+
+    </RelativeLayout>
+</RelativeLayout>

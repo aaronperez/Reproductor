@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Reproductor</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="aleatorio">Aleatorio activado</string>
+    <string name="noaleatorio">Aleatorio desactivado</string>
+    <string name="nocancion">No hay más canciones</string>
+    <string name="stop">Grabación finalizada</string>
+    <string name="rec">Grabación iniciada</string>
+
+</resources>
